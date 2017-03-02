@@ -10,8 +10,10 @@ export default () => {
         <h1>Olivia Carpentier</h1>
         <h2>Infographiste 3D & Motion Design</h2>
         {window ? <p className="Header__email">olivia@oliviacarpentier.be</p> : null}
-        <a className="fa fa-linkedin" href="https://www.linkedin.com/in/olivia-carpentier-2913258/" target="_blank"></a>
-        <a href="#"> CV</a>
+        <div>
+          <a className="fa fa-linkedin" href="https://www.linkedin.com/in/olivia-carpentier-2913258/" target="_blank"></a>
+          <a href="#"> CV</a>
+        </div>
       </div>
     </div>
   )

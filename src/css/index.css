@@ -116,7 +116,7 @@ dialog {
 dialog > div {
   background-color: rgb(53, 54, 73);
   margin: auto;
-  width: 80vw;
+  width: 80vmin;
   max-width: 853px;
   color: white;
   display: flex;
@@ -125,9 +125,9 @@ dialog > div {
   /*padding-bottom: 30px;*/
 }
 .Video > iframe {
-  width: 80vw;
+  width: 80vmin;
   max-width: 853px;
-  height: calc(80vw/1.77);
+  height: calc(80vmin/1.77);
   max-height: 480px;
 }
 
@@ -136,6 +136,7 @@ dialog > div {
   display: flex;
   flex-flow: row wrap;
   justify-content: center;
+  align-items: center;
 }
 #Header img {
   border-radius: 50%;
@@ -149,7 +150,7 @@ dialog > div {
 #Header > div {
   display: flex;
   flex-flow: column;
-  justify-content: center;
+  /*justify-content: center;*/
 }
 .Header__email {
   margin: 20px 0 0;
@@ -189,17 +190,27 @@ dialog > div {
 }
 #Portfolio > div {
   margin: 0 5px 10px;
-  width: 140px;
+  min-width: 140px;
+  max-width: 280px;
+  flex: 1 1 25%;
   position: relative;
   background-color: rgba(255, 255, 255, 0.2);
+  overflow: hidden;
+}
+#Portfolio > div > a {
+  display: block;
+  width: 100%;
+  height: 0;
+  padding-top: 56%;
+  position: relative;
+  border-bottom: 5px solid rgb(255, 225, 91);
 }
 #Portfolio img {
-  max-height: 157px;
-  max-width: 280px;
-  height: calc(140px/1.77);
-  width: 140px;
+  position: absolute;
+    top: 0;
+  width: 100%;
+  height: 100%;
   object-fit: cover;
-  border-bottom: 5px solid rgb(255, 225, 91);
   cursor: pointer;
 }
 #Portfolio > div:hover .layer {
@@ -207,25 +218,27 @@ dialog > div {
 }
 .layer {
   position: absolute;
+    top: 0;
   height: 100%;
   width: 100%;
   background-color: rgba(255, 255, 255, 0.2);
   content: " ";
-  z-index: 0;
+  z-index: 1;
+  display: flex;
 }
-/*.layer:hover {
-  z-index: -1;
-}*/
 #Portfolio i {
-  color: rgb(255, 225, 91);
   /*background-color: rgba(255, 255, 255, 0.3);*/
   /*padding: calc((162px - 64px)/2) calc((280px - 22px)/2);*/
-  position: absolute;
-    top: calc(162px/2 - 64px/2);
-    left: calc(280px/2 - 22.86px/2);
     /*top: 0;
     left: -10px;*/
+
+  color: rgb(255, 225, 91);
+  /*position: absolute;
+    top: calc(162px/2 - 64px/2);
+    left: calc(280px/2 - 22.86px/2);*/
   cursor: pointer;
+  margin: auto;
+  /*z-index: 3;*/
 }
 /*#Portfolio i:hover {
   background: none;
@@ -260,5 +273,9 @@ footer > div {
   }
   #Header > * {
     margin: 20px 0;
+  }
+  #Contact {
+    top: 0;
+    right: 0;
   }
 }
