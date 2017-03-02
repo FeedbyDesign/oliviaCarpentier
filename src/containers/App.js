@@ -7,7 +7,6 @@ import About from '../About'
 import Portfolio from '../Portfolio'
 import Drawer from '../Drawer'
 import Footer from '../Footer'
-// import Thumbnail from './ThumbnailContainer'
 import Dialog from '../Dialog'
 import Contact from '../Contact'
 
@@ -24,10 +23,17 @@ class App extends Component {
       dialogTitle: '',
       dialogText: '',
       aboutDrawerOpen: true,
-      portfolioDrawerOpen: true
+      aboutHeight: 0,
+      portfolioDrawerOpen: true,
+      portfolioHeight: 0
     }
+    // this.updateDimensions = this.updateDimensions.bind(this)
   }
   componentDidMount() {
+    // Listen for resize to set heights
+    // window.addEventListener("resize", this.updateDimensions);
+
+    // Fetch the spreadsheet of videos to display in Portfolio
     const url='https://sheets.googleapis.com/v4/spreadsheets/'+sheet+'/values/1?key='+sheetAPIKey
     fetch(url)
     .then((res) => {
@@ -50,6 +56,9 @@ class App extends Component {
       this.setState({videos: output})
     })
   }
+  // componentWillUnmount() {
+  //   window.removeEventListener("resize", this.updateDimensions);
+  // }
   render() {
     return (
       <div id="App">
@@ -67,6 +76,13 @@ class App extends Component {
     );
   }
 
+  // <Drawer childHeight={this.state.aboutHeight} headline="à propos" drawerOpen={this.state.aboutDrawerOpen} toggleDrawer={()=>this.toggleAboutDrawer()}>
+  //   <About />
+  // </Drawer>
+  // <Drawer childHeight={this.state.portfolioHeight} headline="Portfolio" drawerOpen={this.state.portfolioDrawerOpen} toggleDrawer={()=>this.togglePortfolioDrawer()}>
+  //   <Portfolio videos={this.state.videos} openDialog={(videoId, title, text)=>this.toggleDialog(videoId, title, text)} />
+  // </Drawer>
+
   toggleDialog(videoId='', title='', text='') {
     this.setState({dialogOpen: !this.state.dialogOpen, dialogVideo: videoId, dialogTitle: title, dialogText: text})
   }
@@ -76,6 +92,12 @@ class App extends Component {
   togglePortfolioDrawer() {
     this.setState({portfolioDrawerOpen: !this.state.portfolioDrawerOpen})
   }
+  // updateDimensions() {
+  //   this.setState({
+  //     aboutHeight: document.getElementById("About") && document.getElementById("About").offsetHeight,
+  //     portfolioHeight: document.getElementById("Portfolio") && document.getElementById("Portfolio").offsetHeight
+  //   })
+  // }
 
 }
 

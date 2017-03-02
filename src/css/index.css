@@ -10,6 +10,14 @@
     font-family: poppinslight;
     src: url(../fonts/Poppins-Light.ttf);
 }
+/*@keyframes drawerin {
+  from {
+    height: 0;
+  }
+  to {
+    height: auto;
+  }
+}*/
 html, body, #root {
   margin: 0;
   padding: 0;
@@ -21,10 +29,10 @@ body {
   color: white;
   /*white-space: pre-wrap;*/
 }
-h1::selection, h2::selection, h3::selection, h4::selection, h5::selection, h6::selection, p::selection, a::selection, li::selection, img::selection {
+h1::selection, h2::selection, h3::selection, h4::selection, h5::selection, h6::selection, p::selection, a::selection, li::selection, img::selection, span::selection {
   background-color: rgba(255, 225, 91, 0.5);
 }
-footer *::selection {
+footer *::selection, #Contact *::selection {
   background-color: rgba(53, 54, 73, 0.2);
 }
 h1, h2, h3, h4, h5, h6, p, a {
@@ -50,16 +58,39 @@ a {
   color: currentColor;
   text-decoration: none;
 }
+li {
+  line-height: 1.2em;
+  margin-top: 4px;
+}
 
 #App {
   background-color: rgb(53, 54, 73); /* TODO: Denser color */
   margin: auto;
   /*width: 70%;*/
-  max-width: 1000px;
+  /*max-width: 1000px;*/
   min-height: 100%;
   position: relative;
   display: flex;
   flex-flow: column;
+}
+#Contact {
+  position: fixed;
+    right: -151px;
+    top: 10vh;
+  background-color: rgb(255, 225, 91);
+  color: rgb(53, 54, 73);
+  text-transform: uppercase;
+  font-weight: bold;
+  padding: 10px;
+  z-index: 20;
+  cursor: pointer;
+  transition: right .5s;
+}
+#Contact:hover {
+  right: 0;
+}
+#Contact > span {
+  margin-right: 10px;
 }
 dialog {
   background-color: rgba(255, 255, 255, 0.5);
@@ -69,44 +100,35 @@ dialog {
   box-sizing: border-box;
   position: fixed;
   display: flex;
-  padding: 0 0 0 80px;
-  /*display: none;*/
+  padding: 0;
+  z-index: 19;
 }
-dialog i {
+/*dialog i {
   cursor: pointer;
   position: absolute;
     right: 10px;
-    top: 10px;
+    top: 10px;*/
+
   /*border: 1px solid white;
   border-radius: 50%;
   padding: 3px;*/
-}
+/*}*/
 dialog > div {
-  background-color: #6d645f;
+  background-color: rgb(53, 54, 73);
   margin: auto;
-  max-width: 500px;
-  width: 90%;
-  max-height: 500px;
-  height: 50%;
+  width: 80vw;
+  max-width: 853px;
   color: white;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   /*padding-bottom: 30px;*/
 }
-dialog > div > div:first-child {
-  position: relative;
-  padding: 20px 20px 0;
-  text-align: justify;
-}
-.DialogImgRow {
-  margin: 30px 0;
-  display: flex;
-}
-.DialogImgRow img {
-  width: 50%;
-  max-height: 150px;
-  object-fit: cover;
+.Video > iframe {
+  width: 80vw;
+  max-width: 853px;
+  height: calc(80vw/1.77);
+  max-height: 480px;
 }
 
 #Header {
@@ -123,6 +145,9 @@ dialog > div > div:first-child {
 #Header > div {
   margin: auto 20px;
 }
+.Header__email {
+  margin: 20px 0 0;
+}
 .Drawer {
   border-top: 5px solid rgb(255, 225, 91);
   /*border-bottom: 2px solid rgb(255, 225, 91);*/
@@ -131,20 +156,45 @@ dialog > div > div:first-child {
   margin: 0 10px;
   /*color: white;*/
 }
+.Drawer > div {
+  overflow: hidden;
+}
+.DrawerContent--open {
+  margin-top: 0;
+  /*transition: margin-bottom 1s;*/
+  max-height: 10000px;
+  transition: max-height 1s ease-in;
+}
+.DrawerContent--closed {
+  margin-top: -10000px; /* TODO: change pixel range depending on screen width */
+  max-height: 0;
+  transition: all 1s ease-in;
+  /*transition: margin-bottom 1s ease-in, max-height 1s ease-in;*/
+}
 #About {
   padding: 30px 10%;
 }
+
 #Portfolio {
-  margin: 30px;
+  padding: 30px;
   display: flex;
   flex-flow: row wrap;
   justify-content: space-around;
 }
 #Portfolio > div {
   margin: 0 5px 10px;
-  width: 280px;
+  width: 150px;
   position: relative;
   background-color: rgba(255, 255, 255, 0.2);
+}
+#Portfolio img {
+  max-height: 157px;
+  max-width: 280px;
+  height: calc(150px/1.77);
+  width: 150px;
+  object-fit: cover;
+  border-bottom: 5px solid rgb(255, 225, 91);
+  cursor: pointer;
 }
 #Portfolio > div:hover .layer {
   z-index: -1;
@@ -160,13 +210,6 @@ dialog > div > div:first-child {
 /*.layer:hover {
   z-index: -1;
 }*/
-#Portfolio img {
-  height: 157px;
-  width: 280px;
-  object-fit: cover;
-  border-bottom: 5px solid rgb(255, 225, 91);
-  cursor: pointer;
-}
 #Portfolio i {
   color: rgb(255, 225, 91);
   /*background-color: rgba(255, 255, 255, 0.3);*/

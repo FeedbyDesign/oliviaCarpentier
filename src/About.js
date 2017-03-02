@@ -1,8 +1,8 @@
 import React from 'react'
 
-export default () => {
+export default (props) => {
   return (
-    <div id="About">
+    <div id="About" className={props.open ? "DrawerContent--open" : "DrawerContent--closed"}>
       <p>Diplomée de la Haute Ecole Albert Jacquart de Namur en 2005, j'ai gagné en expérience durant ces 12 années en explorant de nombreux domaines de production:</p>
       <ul>
         <li>La série TV en 3D avec "Samsam", réalisée par Tanguy De Kermel, diffusée sur France 5.</li>
