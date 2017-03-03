@@ -67,6 +67,9 @@ h3 {
   text-transform: uppercase;
   cursor: pointer;
 }
+h3:hover {
+  color: rgb(255, 225, 91);
+}
 h5 {
   font-size: .9em;
   font-family: poppinsregular, sans-serif;
@@ -295,12 +298,12 @@ footer {
 .DrawerContent--open {
   margin-top: 0;
   max-height: 2500px;
-  transition: max-height 1s ease;
+  transition: max-height 1.5s ease;
 }
 .DrawerContent--closed {
   margin-top: -2500px;
   max-height: 0;
-  transition: all 1s ease;
+  transition: margin-top 1.5s ease, max-height 0s ease 1.5s;
 }
 
 footer > div {
