@@ -69,8 +69,8 @@ h3 {
 }
 h5 {
   font-size: .9em;
-  /*text-transform: uppercase;*/
-  font-family: poppinsbold, sans-serif;
+  font-family: poppinsregular, sans-serif;
+  font-weight: bold;
 }
 h6 {
   font-size: .8em;
@@ -209,11 +209,11 @@ dialog > div {
 }
 .Drawer > div {
   overflow: hidden;
+  max-width: 1300px;
+  margin: auto;
 }
 #About, #Portfolio {
   padding: 30px;
-  max-width: 1300px;
-  /*margin: auto;*/
 }
 
 #Portfolio {
