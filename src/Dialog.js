@@ -8,7 +8,7 @@ export default (props) => {
         <div onClick={(e)=>{e.stopPropagation()}}>
           <div>
             <Video videoId={props.videoId} />
-            <div className="caption">
+            <div className="caption--large">
               <h4>{props.title}</h4>
               <p>{props.text}</p>
             </div>

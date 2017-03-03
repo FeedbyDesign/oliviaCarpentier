@@ -22,10 +22,8 @@ class App extends Component {
       dialogVideo: '',
       dialogTitle: '',
       dialogText: '',
-      aboutDrawerOpen: true,
-      aboutHeight: 0,
-      portfolioDrawerOpen: true,
-      portfolioHeight: 0
+      aboutDrawerOpen: false,
+      portfolioDrawerOpen: true
     }
     // this.updateDimensions = this.updateDimensions.bind(this)
   }

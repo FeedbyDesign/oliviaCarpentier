@@ -10,6 +10,19 @@
     font-family: poppinslight;
     src: url(../fonts/Poppins-Light.ttf);
 }
+@font-face {
+    font-family: poppinsbold;
+    src: url(../fonts/Poppins-Bold.ttf);
+}
+.colorDark {
+  color: #20212c;
+}
+.colorBright {
+  color: rgb(255, 225, 91);
+}
+.colorWhite {
+  color: white;
+}
 /*@keyframes drawerin {
   from {
     height: 0;
@@ -54,6 +67,16 @@ h3 {
   text-transform: uppercase;
   cursor: pointer;
 }
+h5 {
+  font-size: .9em;
+  /*text-transform: uppercase;*/
+  font-family: poppinsbold, sans-serif;
+}
+h6 {
+  font-size: .8em;
+  line-height: 1.1em;
+  font-weight: lighter;
+}
 a {
   color: currentColor;
   text-decoration: none;
@@ -64,7 +87,7 @@ li {
 }
 
 #App {
-  background-color: rgb(53, 54, 73); /* TODO: Denser color */
+  background-color: #20212c; /* TODO: Denser color */
   margin: auto;
   /*width: 70%;*/
   /*max-width: 1000px;*/
@@ -78,7 +101,7 @@ li {
     right: -151px;
     top: 10vh;
   background-color: rgb(255, 225, 91);
-  color: rgb(53, 54, 73);
+  color: #20212c;
   text-transform: uppercase;
   font-weight: bold;
   padding: 10px;
@@ -114,7 +137,7 @@ dialog {
   padding: 3px;*/
 /*}*/
 dialog > div {
-  background-color: rgb(53, 54, 73);
+  background-color: #20212c;
   margin: auto;
   width: 80vmin;
   max-width: 853px;
@@ -127,8 +150,9 @@ dialog > div {
 .Video > iframe {
   width: 80vmin;
   max-width: 853px;
-  height: calc(80vmin/1.77);
+  height: calc(80vmin/1.8);
   max-height: 480px;
+  border-bottom: 5px solid rgb(255, 225, 91);
 }
 
 #Header {
@@ -155,6 +179,26 @@ dialog > div {
 .Header__email {
   margin: 20px 0 0;
 }
+.Header__email:hover {
+  color: rgb(255, 225, 91);
+}
+.Header__links > a {
+  display: inline-block;
+  background-color: rgb(255, 225, 91);
+  color: #20212c;
+  font-family: poppinsbold, sans-serif;
+  height: 30px;
+  width: 30px;
+  border: 2px solid rgb(255, 225, 91);
+  border-radius: 50%;
+  margin: 10px 10px 0 0;
+  text-align: center;
+  line-height: 30px;
+}
+.Header__links > a:hover {
+  background-color: inherit;
+  color: rgb(255, 225, 91);
+}
 .Drawer {
   border-top: 5px solid rgb(255, 225, 91);
   /*border-bottom: 2px solid rgb(255, 225, 91);*/
@@ -166,22 +210,10 @@ dialog > div {
 .Drawer > div {
   overflow: hidden;
 }
-.DrawerContent--open {
-  margin-top: 0;
-  /*transition: margin-bottom 1s;*/
-  max-height: 10000px;
-  transition: max-height 1s ease-in;
-}
-.DrawerContent--closed {
-  margin-top: -10000px; /* TODO: change pixel range depending on screen width */
-  max-height: 0;
-  transition: all 1s ease-in;
-  /*transition: margin-bottom 1s ease-in, max-height 1s ease-in;*/
-}
 #About, #Portfolio {
   padding: 30px;
   max-width: 1300px;
-  margin: auto;
+  /*margin: auto;*/
 }
 
 #Portfolio {
@@ -195,7 +227,7 @@ dialog > div {
   max-width: 280px;
   flex: 1 1 25%;
   position: relative;
-  background-color: rgba(255, 255, 255, 0.2);
+  background-color: rgba(255, 255, 255, .1);
   overflow: hidden;
 }
 #Portfolio > div > a {
@@ -247,6 +279,9 @@ dialog > div {
 .caption {
   padding: 0 5px 5px;
 }
+.caption--large {
+  padding: 0 10px 10px;
+}
 footer {
   /*position: absolute;
     bottom: 0;*/
@@ -256,16 +291,30 @@ footer {
   flex-direction: column;
   justify-content: flex-end;
 }
+
+.DrawerContent--open {
+  margin-top: 0;
+  max-height: 2500px;
+  transition: max-height 1s ease;
+}
+.DrawerContent--closed {
+  margin-top: -2500px;
+  max-height: 0;
+  transition: all 1s ease;
+}
+
 footer > div {
   background-color: rgb(255, 225, 91);
-  color: rgb(53, 54, 73);
+  color: #20212c;
   text-align: center;
   padding: 10px;
 }
-.feed:hover {
-  color:
+.feed > a:hover {
+  color: rgb(43, 201, 175);
+  text-decoration: none;
 }
-@media (max-width: 500px) {
+
+@media (max-width: 525px) {
   #Portfolio {
     padding: 30px 0;
   }
@@ -278,5 +327,11 @@ footer > div {
   #Contact {
     top: 0;
     right: 0;
+  }
+  .DrawerContent--open {
+    max-height: 7000px;
+  }
+  .DrawerContent--closed {
+    margin-top: -7000px;
   }
 }
