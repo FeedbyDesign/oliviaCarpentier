@@ -178,12 +178,13 @@ dialog > div {
   transition: all 1s ease-in;
   /*transition: margin-bottom 1s ease-in, max-height 1s ease-in;*/
 }
-#About {
-  padding: 30px 10%;
+#About, #Portfolio {
+  padding: 30px;
+  max-width: 1300px;
+  margin: auto;
 }
 
 #Portfolio {
-  padding: 30px;
   display: flex;
   flex-flow: row wrap;
   justify-content: space-around;
