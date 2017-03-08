@@ -1,6 +1,6 @@
 import React from 'react'
 
-import olivia from './img/olivia.jpg'
+import olivia from './img/oliviaColors.jpg'
 
 const email = 'contact@oliviacarpentier.be'
 
