@@ -14,7 +14,7 @@ export default () => {
         {window ? <a className="Header__email" href={"mailto:" + email}>{email}</a> : null}
         <div className="Header__links">
           <a href="https://www.linkedin.com/in/olivia-carpentier-2913258/" target="_blank">in</a>
-          <a href="%PUBLIC_URL%/cv.pdf" target="_blank">cv</a>
+          <a href={process.env.PUBLIC_URL + '/cv.pdf'} target="_blank">cv</a>
         </div>
       </div>
     </div>
