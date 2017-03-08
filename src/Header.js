@@ -2,7 +2,7 @@ import React from 'react'
 
 import olivia from './img/olivia.jpg'
 
-const email = 'olivia@oliviacarpentier.be'
+const email = 'contact@oliviacarpentier.be'
 
 export default () => {
   return (

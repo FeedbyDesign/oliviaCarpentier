@@ -1,6 +1,6 @@
 import React from 'react'
 
-const email = 'olivia@oliviacarpentier.be'
+const email = 'contact@oliviacarpentier.be'
 
 export default class Contact extends React.Component{
   constructor(props) {
