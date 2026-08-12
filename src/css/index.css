@@ -18,7 +18,7 @@
   color: #20212c;
 }
 .colorBright {
-  color: rgb(255, 225, 91);
+  color: #F99521;
 }
 .colorWhite {
   color: white;
@@ -38,7 +38,7 @@ html, body, #root {
 }
 body {
   font-family: poppinslight, sans-serif;
-  /*color: rgb(255, 225, 91);*/
+  /*color: #F99521;*/
   color: white;
   /*white-space: pre-wrap;*/
 }
@@ -68,7 +68,7 @@ h3 {
   cursor: pointer;
 }
 h3:hover {
-  color: rgb(255, 225, 91);
+  color: #F99521;
 }
 h5 {
   font-size: .9em;
@@ -103,7 +103,7 @@ li {
   position: fixed;
     right: -151px;
     top: 10vh;
-  background-color: rgb(255, 225, 91);
+  background-color: #F99521;
   color: #20212c;
   text-transform: uppercase;
   font-weight: bold;
@@ -155,7 +155,7 @@ dialog > div {
   max-width: 853px;
   height: calc(80vmin/1.8);
   max-height: 480px;
-  border-bottom: 5px solid rgb(255, 225, 91);
+  border-bottom: 5px solid #F99521;
 }
 
 #Header {
@@ -183,16 +183,16 @@ dialog > div {
   margin: 20px 0 0;
 }
 .Header__email:hover {
-  color: rgb(255, 225, 91);
+  color: #F99521;
 }
 .Header__links > a {
   display: inline-block;
-  background-color: rgb(255, 225, 91);
+  background-color: #F99521;
   color: #20212c;
   font-family: poppinsbold, sans-serif;
   height: 30px;
   width: 30px;
-  border: 2px solid rgb(255, 225, 91);
+  border: 2px solid #F99521;
   border-radius: 50%;
   margin: 10px 10px 0 0;
   text-align: center;
@@ -200,11 +200,11 @@ dialog > div {
 }
 .Header__links > a:hover {
   background-color: inherit;
-  color: rgb(255, 225, 91);
+  color: #F99521;
 }
 .Drawer {
-  border-top: 5px solid rgb(255, 225, 91);
-  /*border-bottom: 2px solid rgb(255, 225, 91);*/
+  border-top: 5px solid #F99521;
+  /*border-bottom: 2px solid #F99521;*/
 }
 .Drawer i {
   margin: 0 10px;
@@ -239,7 +239,7 @@ dialog > div {
   height: 0;
   padding-top: 56%;
   position: relative;
-  border-bottom: 5px solid rgb(255, 225, 91);
+  border-bottom: 5px solid #F99521;
 }
 #Portfolio img {
   position: absolute;
@@ -268,7 +268,7 @@ dialog > div {
     /*top: 0;
     left: -10px;*/
 
-  color: rgb(255, 225, 91);
+  color: #F99521;
   /*position: absolute;
     top: calc(162px/2 - 64px/2);
     left: calc(280px/2 - 22.86px/2);*/
@@ -307,7 +307,7 @@ footer {
 }
 
 footer > div {
-  background-color: rgb(255, 225, 91);
+  background-color: #F99521;
   color: #20212c;
   text-align: center;
   padding: 10px;
