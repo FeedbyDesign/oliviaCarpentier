@@ -297,8 +297,9 @@ footer {
 
 .DrawerContent--open {
   margin-top: 0;
-  max-height: 2500px;
+  max-height: 3650px;
   transition: max-height 1.5s ease;
+  overflow-y: auto;
 }
 .DrawerContent--closed {
   margin-top: -2500px;
