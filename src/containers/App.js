@@ -10,7 +10,7 @@ import Footer from '../Footer'
 import Dialog from '../Dialog'
 import Contact from '../Contact'
 
-const sheetAPIKey = 'AIzaSyDEDtipgCsH_u-qCdMDqoD61iABhScggKc'
+const sheetAPIKey = process.env.sheetAPIKey
 const sheet='19Py2SBSoyntHDcMKanAsV_g81G6ZQ1KRBUfqPvISNS0'
 
 class App extends Component {
